@@ -136,6 +136,11 @@ button:hover{
 }
 
 @media(max-width:500px){
+    nav{
+        display:flex;
+        justify-content: space-evenly;
+        width:70%;
+    }
     .title-container div{
         width:100%;
         display:flex;
