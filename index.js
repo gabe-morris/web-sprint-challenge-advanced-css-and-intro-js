@@ -242,10 +242,10 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  let get20sArr = [];
- for(let i = 0; i < array.length;i++){
-   if((array[i].years).startsWith("19")){
-    get20sArr.push(array[i].name);
+  let get20sArr = []; //new empty array
+ for(let i = 0; i < array.length;i++){ // check through whole array
+   if((array[i].years).startsWith("19")){ //checks if birth year starts with 19
+    get20sArr.push(array[i].name); // pushes into empty array
    }
    }
    return get20sArr;
@@ -264,8 +264,8 @@ console.log("Task 4",get20s(artists));
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number){
-    array.splice(number, 1)
-    return array.length;
+    array.splice(number, 1)//removes artist at index given
+    return array.length;// returns new array length
 }
    console.log("Task 5",removeArtist(artists, 0));
 
@@ -294,10 +294,10 @@ function addArtist(array){
   nationality: "American",
   bio: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit deserunt earum sed ratione illo aperiam commodi corrupti a impedit consequuntur."
   } 
-  array.push(newArtist);
-  return array;
+  array.push(newArtist); //adds new artist to bottom of array
+  return array; //returns array w/ new artist
 }
-console.log(addArtist(artists))
+console.log("Task 6", addArtist(artists))
 
 
   
@@ -309,10 +309,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let lotsofArr = []; // new empty array
+for(let i = 0; i < array.length; i++){
+  if(array[i].paintings > 100){ // checks if artist has done more than 100 paintings
+   lotsofArr.push(array[i].name); // pushes artist into new array
+  }
 }
-
+ return lotsofArr; //returns new array
+}
+console.log("Task 7",lotsOfArt(artists));
 
 
 
